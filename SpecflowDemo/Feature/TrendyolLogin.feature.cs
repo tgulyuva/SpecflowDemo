@@ -75,11 +75,11 @@ namespace SpecflowDemo.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Perform Login of Trendyol with wrong password")]
-        [NUnit.Framework.CategoryAttribute("login")]
+        [NUnit.Framework.CategoryAttribute("Login")]
         public virtual void PerformLoginOfTrendyolWithWrongPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "login"};
+                    "Login"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform Login of Trendyol with wrong password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5

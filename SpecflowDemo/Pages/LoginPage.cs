@@ -46,5 +46,7 @@ namespace SpecflowDemo.Pages
             
             return txtMessage.Displayed;
         }
+
+        public void CloseDriver() => WebDriver.Close();
     }
 }

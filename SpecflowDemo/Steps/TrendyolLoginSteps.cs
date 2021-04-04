@@ -56,6 +56,7 @@ namespace SpecflowDemo.Steps
         public void ThenIShouldSeeErrorMessage()
         {
             Assert.IsTrue(loginPage.IsShowMessage());
+            loginPage.CloseDriver();
         }
 
     }

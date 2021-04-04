@@ -1,7 +1,7 @@
 ﻿Feature: TrendyolLogin
 Login to Trendyol 
 
-@login
+@Login
 Scenario: Perform Login of Trendyol with wrong password
 	#steps
 	Given I launch the trendyol
