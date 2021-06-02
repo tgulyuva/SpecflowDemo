@@ -5,7 +5,6 @@ Login to Trendyol
 Scenario: Perform Login of Trendyol with wrong password
 	#steps
 	Given I launch the trendyol
-	#And I close the modal
 	And I click login link
 	And I enter the following details
 		| Email                 | Password  |

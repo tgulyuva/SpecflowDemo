@@ -14,24 +14,24 @@ namespace SpecflowDemo.Steps
     [Binding]
     public sealed class TrendyolLoginSteps
     {
-        private LoginPage loginPage = null;
+        LoginPage loginPage;
+        private DriverHelper _driverHelper;
+
+        public TrendyolLoginSteps(DriverHelper driverHelper)
+        {
+            _driverHelper = driverHelper;
+            loginPage = new LoginPage(_driverHelper.Driver);
+        }
+
         // Anti-Context Injection code
         //Step definations
         [Given(@"I launch the trendyol")]
         public void GivenILaunchTheTrendyol()
         {
             IWebDriver webDriver = new ChromeDriver();
-           // webDriver.Manage().Window.Maximize();
             webDriver.Navigate().GoToUrl("https://www.trendyol.com/butik/liste/erkek");
             loginPage = new LoginPage(webDriver);
         }
-        //[Given(@"I close the modal")]
-        //public void GivenICloseTheModal()
-        //{
-        
-        //}
-
-
         [Given(@"I click login link")]
         public void GivenIClickLoginLink()
         {
@@ -50,7 +50,6 @@ namespace SpecflowDemo.Steps
         {
             loginPage.ClickLoginButton();
         }
-
 
         [Then(@"I should see Error Message")]
         public void ThenIShouldSeeErrorMessage()
